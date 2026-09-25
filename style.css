@@ -51,39 +51,39 @@ body.dark-mode h2, body.dark-mode h3 {
 hheader {
     background-color: var(--header-bg);
     color: #ffffff;
-    padding: 1.5rem 1rem; /* Reduced padding for a slimmer header */
+    padding: 1.5rem 1rem; 
     text-align: center;
-    border-bottom: 3px solid var(--accent); /* Thinner, sleeker accent line */
+    border-bottom: 3px solid var(--accent); 
     transition: background-color 0.4s ease;
 }
 
 .logo {
-    width: 85px; /* Smaller, more balanced size */
+    width: 85px; 
     height: 85px;
     object-fit: cover;
-    border-radius: 50%; /* Keeps the clean circular look to hide the square background */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle, frosted border instead of a harsh solid color */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Softer, more diffused drop shadow */
+    border-radius: 50%; 
+    border: 2px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     margin-bottom: 0.8rem;
     transition: transform 0.3s ease;
 }
 
 .logo:hover {
-    transform: scale(1.05); /* Adds a subtle hover animation */
+    transform: scale(1.05);
 }
 
 header h1 {
     color: #ffffff;
     margin: 0 0 2px 0;
-    font-size: 2.2rem; /* Scaled down to match the smaller logo */
+    font-size: 2.2rem;
     text-transform: uppercase;
-    letter-spacing: 3px; /* Increased letter spacing for an elegant, premium look */
+    letter-spacing: 3px; 
 }
 
 header p {
     margin: 0;
     font-size: 0.95rem;
-    color: #cccccc; /* Muted text color for better visual hierarchy */
+    color: #cccccc;
     letter-spacing: 1px;
 }
 
