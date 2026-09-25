@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Racing Relics</title>
     <style>
-
+        /* Navy Blue and White Theme */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff; 
-            color: #000080; 
+            background-color: #ffffff; /* White background */
+            color: #000080; /* Navy blue text */
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         header {
-            background-color: #000080; 
-            color: #ffffff;
+            background-color: #000080; /* Navy blue background */
+            color: #ffffff; /* White text */
             padding: 2rem 0;
             text-align: center;
+        }
+        .logo {
+            max-height: 120px;
+            margin-bottom: 1rem;
         }
         header h1 {
             margin: 0;
@@ -26,7 +30,7 @@
             letter-spacing: 2px;
         }
         nav {
-            background-color: #000050; 
+            background-color: #000050; /* Darker navy for navigation */
             display: flex;
             justify-content: center;
             padding: 1rem 0;
@@ -61,13 +65,34 @@
             text-align: center;
             border-bottom: none;
         }
-        .hero-image {
-            max-width: 100%;
-            height: auto;
+        
+        /* Slideshow CSS */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: 2rem auto;
+            box-shadow: 0 4px 12px rgba(0,0,128,0.3);
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,128,0.2);
-            margin: 1rem 0;
+            overflow: hidden;
         }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
         .inventory-list {
             list-style-type: square;
             padding-left: 20px;
@@ -97,30 +122,47 @@
 </head>
 <body>
 
-
+    <!-- Header with Logo -->
     <header>
+        <img src="assets/logo.png" alt="Racing Relics Logo" class="logo">
         <h1>Racing Relics</h1>
         <p>Your Premier Destination for Hot Wheels Collecting</p>
     </header>
 
+    <!-- Navigation Menu -->
     <nav>
         <a href="#welcome">Home</a>
         <a href="#in-stock">In-Stock Available</a>
         <a href="#limited-offers">Limited Offers</a>
     </nav>
 
-
+    <!-- Main Content -->
     <main>
         
-        
+        <!-- Section 1: Welcome & Slideshow -->
         <section id="welcome" class="hero-section">
             <h2>Welcome to Racing Relics</h2>
             <p>Built for the true Hot Wheels buyers and collectors, Racing Relics is a dedicated small business platform. Whether you are hunting for vintage treasures, rare imports, or completing your mainline collections, we have something for every enthusiast.</p>
-
-            <img src="image_e3aa39.png" alt="Racing Relics Hot Wheels Collection Display" class="hero-image">
+            
+            <!-- Slideshow Container -->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <!-- Note: %20 is used for spaces in filenames so links don't break on GitHub -->
+                    <img src="assets/slide%201.png" alt="Hot Wheels Slide 1">
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets/slide%202.png" alt="Hot Wheels Slide 2">
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets/slide%203.png" alt="Hot Wheels Slide 3">
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets/slide%204.png" alt="Hot Wheels Slide 4">
+                </div>
+            </div>
         </section>
 
-
+        <!-- Section 2: In-Stock Available -->
         <section id="in-stock">
             <h2>Currently In-Stock</h2>
             <p>Browse our latest arrivals. These fast-moving items are ready to ship to your display case today:</p>
@@ -160,5 +202,22 @@
         <p>Built for Hot Wheels Enthusiasts.</p>
     </footer>
 
+    <!-- Slideshow JavaScript -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+        }
+    </script>
 </body>
 </html>
