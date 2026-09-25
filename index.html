@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Relics</title>
+    <style>
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff; 
+            color: #000080; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #000080; 
+            color: #ffffff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        nav {
+            background-color: #000050; 
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #cccccc;
+            text-decoration: underline;
+        }
+        main {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #000080;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .hero-section {
+            text-align: center;
+            border-bottom: none;
+        }
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,128,0.2);
+            margin: 1rem 0;
+        }
+        .inventory-list {
+            list-style-type: square;
+            padding-left: 20px;
+            font-size: 1.1rem;
+        }
+        .inventory-list li {
+            margin-bottom: 0.5rem;
+        }
+        .offer-card {
+            background-color: #f0f4f8; 
+            border-left: 5px solid #000080;
+            padding: 15px;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #000080;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <h1>Racing Relics</h1>
+        <p>Your Premier Destination for Hot Wheels Collecting</p>
+    </header>
+
+    <nav>
+        <a href="#welcome">Home</a>
+        <a href="#in-stock">In-Stock Available</a>
+        <a href="#limited-offers">Limited Offers</a>
+    </nav>
+
+
+    <main>
+        
+        
+        <section id="welcome" class="hero-section">
+            <h2>Welcome to Racing Relics</h2>
+            <p>Built for the true Hot Wheels buyers and collectors, Racing Relics is a dedicated small business platform. Whether you are hunting for vintage treasures, rare imports, or completing your mainline collections, we have something for every enthusiast.</p>
+
+            <img src="image_e3aa39.png" alt="Racing Relics Hot Wheels Collection Display" class="hero-image">
+        </section>
+
+
+        <section id="in-stock">
+            <h2>Currently In-Stock</h2>
+            <p>Browse our latest arrivals. These fast-moving items are ready to ship to your display case today:</p>
+            <!-- Unordered List -->
+            <ul class="inventory-list">
+                <li><strong>Nissan Skyline GT-R (R34)</strong> - Premium Car Culture Edition</li>
+                <li><strong>'55 Chevy Bel Air Gasser</strong> - Mattel Creations Exclusive</li>
+                <li><strong>Porsche 911 GT3 RS</strong> - Mainline (Navy Blue Variant)</li>
+                <li><strong>Custom '72 Chevy Courier</strong> - Treasure Hunt Series</li>
+                <li><strong>McLaren F1 GTR</strong> - Team Transport Bundle</li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Limited Offers -->
+        <section id="limited-offers">
+            <h2>Limited Hot Wheels Offers</h2>
+            <p>Don't miss out on these exclusive, time-sensitive deals curated specifically for dedicated collectors!</p>
+            
+            <div class="offer-card">
+                <h3>Red Line Club (RLC) Mystery Box</h3>
+                <p>Contains two guaranteed RLC exclusive cars from past years. <em>Only 5 boxes left in stock!</em></p>
+            </div>
+            
+            <div class="offer-card">
+                <h3>Buy 3, Get 1 Free Mainlines</h3>
+                <p>Perfect for customizers or filling out your wall display. Add four mainlines to your cart and the discount applies automatically at checkout.</p>
+            </div>
+            
+            <p>Looking for a specific model not listed here? Check out our <a href="https://creations.mattel.com/pages/hot-wheels-collectors" target="_blank" rel="noopener noreferrer">official partner resources</a> to cross-reference casting numbers and release years.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Racing Relics. All rights reserved.</p>
+        <p>Built for Hot Wheels Enthusiasts.</p>
+    </footer>
+
+</body>
+</html>
