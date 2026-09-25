@@ -48,7 +48,7 @@ body.dark-mode h2, body.dark-mode h3 {
     color: #ffffff;
 }
 
-hheader {
+header {
     background-color: var(--header-bg);
     color: #ffffff;
     padding: 1.5rem 1rem; 
