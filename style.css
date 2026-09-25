@@ -51,22 +51,28 @@ body.dark-mode h2, body.dark-mode h3 {
 header {
     background-color: var(--header-bg);
     color: #ffffff;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem; /* Slightly reduced padding so it doesn't take up too much vertical space */
     text-align: center;
-    border-bottom: 5px solid var(--accent);
+    border-bottom: 4px solid var(--accent);
     transition: background-color 0.4s ease;
 }
 
 header h1 {
     color: #ffffff;
-    margin: 0 0 10px 0;
-    font-size: 3rem;
+    margin: 0 0 5px 0;
+    font-size: 2.8rem;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .logo {
-    max-height: 130px;
-    margin-bottom: 1.5rem;
+    width: 120px;
+    height: 120px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 3px solid var(--accent); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5); 
+    margin-bottom: 1rem;
 }
 
 
