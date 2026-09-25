@@ -4,121 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Racing Relics</title>
-    <style>
-        /* Navy Blue and White Theme */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff; /* White background */
-            color: #000080; /* Navy blue text */
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #000080; /* Navy blue background */
-            color: #ffffff; /* White text */
-            padding: 2rem 0;
-            text-align: center;
-        }
-        .logo {
-            max-height: 120px;
-            margin-bottom: 1rem;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-        }
-        nav {
-            background-color: #000050; /* Darker navy for navigation */
-            display: flex;
-            justify-content: center;
-            padding: 1rem 0;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #cccccc;
-            text-decoration: underline;
-        }
-        main {
-            max-width: 960px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
-        section {
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid #000080;
-        }
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .hero-section {
-            text-align: center;
-            border-bottom: none;
-        }
-        
-        /* Slideshow CSS */
-        .slideshow-container {
-            max-width: 800px;
-            position: relative;
-            margin: 2rem auto;
-            box-shadow: 0 4px 12px rgba(0,0,128,0.3);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .mySlides {
-            display: none;
-        }
-        .mySlides img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        /* Fading animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-        @keyframes fade {
-            from {opacity: .4} 
-            to {opacity: 1}
-        }
-
-        .inventory-list {
-            list-style-type: square;
-            padding-left: 20px;
-            font-size: 1.1rem;
-        }
-        .inventory-list li {
-            margin-bottom: 0.5rem;
-        }
-        .offer-card {
-            background-color: #f0f4f8; 
-            border-left: 5px solid #000080;
-            padding: 15px;
-            margin-bottom: 1rem;
-        }
-        footer {
-            background-color: #000080;
-            color: #ffffff;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: auto;
-        }
-        footer a {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-    </style>
+    <!-- Connects to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -140,14 +27,15 @@
     <main>
         
         <!-- Section 1: Welcome & Slideshow -->
-        <section id="welcome" class="hero-section">
+        <section id="welcome">
             <h2>Welcome to Racing Relics</h2>
             <p>Built for the true Hot Wheels buyers and collectors, Racing Relics is a dedicated small business platform. Whether you are hunting for vintage treasures, rare imports, or completing your mainline collections, we have something for every enthusiast.</p>
             
+            <a href="#in-stock" class="btn">Shop Now</a>
+
             <!-- Slideshow Container -->
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                    <!-- Note: %20 is used for spaces in filenames so links don't break on GitHub -->
                     <img src="assets/slide%201.png" alt="Hot Wheels Slide 1">
                 </div>
                 <div class="mySlides fade">
@@ -166,13 +54,14 @@
         <section id="in-stock">
             <h2>Currently In-Stock</h2>
             <p>Browse our latest arrivals. These fast-moving items are ready to ship to your display case today:</p>
-            <!-- Unordered List -->
+            
+            <!-- List transformed into a CSS grid -->
             <ul class="inventory-list">
-                <li><strong>Nissan Skyline GT-R (R34)</strong> - Premium Car Culture Edition</li>
-                <li><strong>'55 Chevy Bel Air Gasser</strong> - Mattel Creations Exclusive</li>
-                <li><strong>Porsche 911 GT3 RS</strong> - Mainline (Navy Blue Variant)</li>
-                <li><strong>Custom '72 Chevy Courier</strong> - Treasure Hunt Series</li>
-                <li><strong>McLaren F1 GTR</strong> - Team Transport Bundle</li>
+                <li><strong>Nissan Skyline GT-R (R34)</strong><br>Premium Car Culture Edition</li>
+                <li><strong>'55 Chevy Bel Air Gasser</strong><br>Mattel Creations Exclusive</li>
+                <li><strong>Porsche 911 GT3 RS</strong><br>Mainline (Navy Blue Variant)</li>
+                <li><strong>Custom '72 Chevy Courier</strong><br>Treasure Hunt Series</li>
+                <li><strong>McLaren F1 GTR</strong><br>Team Transport Bundle</li>
             </ul>
         </section>
 
@@ -184,6 +73,7 @@
             <div class="offer-card">
                 <h3>Red Line Club (RLC) Mystery Box</h3>
                 <p>Contains two guaranteed RLC exclusive cars from past years. <em>Only 5 boxes left in stock!</em></p>
+                <a href="#" class="btn">Claim Box</a>
             </div>
             
             <div class="offer-card">
@@ -202,22 +92,7 @@
         <p>Built for Hot Wheels Enthusiasts.</p>
     </footer>
 
-    <!-- Slideshow JavaScript -->
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 3500); // Change image every 3.5 seconds
-        }
-    </script>
+    <!-- Connects to your external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
