@@ -16,11 +16,17 @@
         <p>Your Premier Destination for Hot Wheels Collecting</p>
     </header>
 
-    <!-- Navigation Menu -->
+    <!-- Navigation Menu (Added Live Clock & Theme Button) -->
     <nav>
-        <a href="#welcome">Home</a>
-        <a href="#in-stock">In-Stock Available</a>
-        <a href="#limited-offers">Limited Offers</a>
+        <div class="nav-links">
+            <a href="#welcome">Home</a>
+            <a href="#in-stock">In-Stock Available</a>
+            <a href="#limited-offers">Limited Offers</a>
+        </div>
+        <div class="nav-controls">
+            <div id="live-clock" class="clock-display">00:00:00</div>
+            <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -28,6 +34,17 @@
         
         <!-- Section 1: Welcome & Slideshow -->
         <section id="welcome">
+            <!-- Countdown Timer -->
+            <div id="launch-banner" class="countdown-container">
+                <h3>Official Grand Opening In:</h3>
+                <div id="countdown-timer">
+                    <div class="time-box"><span id="days">00</span><small>Days</small></div>
+                    <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+                    <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+                    <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+                </div>
+            </div>
+
             <h2>Welcome to Racing Relics</h2>
             <p>Built for the true Hot Wheels buyers and collectors, Racing Relics is a dedicated small business platform. Whether you are hunting for vintage treasures, rare imports, or completing your mainline collections, we have something for every enthusiast.</p>
             
